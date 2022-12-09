@@ -1,0 +1,115 @@
+@import '../style/common.style.scss';
+.syui-select-container {
+  position: relative;
+  box-sizing: border-box;
+  .syui-select {
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: default;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-height: 38px;
+    position: relative;
+    transition: all 100ms ease 0s;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(204, 204, 204);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    outline: 0px !important;
+    &:hover {
+      border-color: rgb(179, 179, 179);
+    }
+    .syui-select__value-container {
+      -webkit-box-align: center;
+      align-items: center;
+      display: grid;
+      flex: 1 1 0%;
+      flex-wrap: wrap;
+      position: relative;
+      overflow: hidden;
+      padding: 2px 8px;
+      box-sizing: border-box;
+    }
+    .syui-select__value {
+      grid-area: 1 / 1 / 2 / 3;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: rgb(51, 51, 51);
+      margin-left: 2px;
+      margin-right: 2px;
+      box-sizing: border-box;
+    }
+    .syui-select__input {
+      background: 0px center;
+      border: 0px;
+      caret-color: transparent;
+      font-size: inherit;
+      grid-area: 1 / 1 / 2 / 3;
+      outline: 0px;
+      padding: 0px;
+      color: transparent;
+      position: relative;
+
+      // 인보이기
+      width: 1px;
+      left: -100px;
+      opacity: 0;
+      transform: scale(0.01);
+
+      // 포커스 표시
+      // &:focus {
+      //   border: 1px solid red;
+      // }
+    }
+  }
+  .syui-select__focused {
+    border-color: rgb(38, 132, 255);
+    box-shadow: rgb(38 132 255) 0px 0px 0px 1px;
+  }
+  .syui-select__options {
+    top: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 0px 1px, rgb(0 0 0 / 10%) 0px 4px 11px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    .syui-select__option-list {
+      max-height: 300px;
+      overflow-y: auto;
+      position: relative;
+      padding-bottom: 4px;
+      padding-top: 4px;
+      box-sizing: border-box;
+      .syui-select__option {
+        cursor: default;
+        display: block;
+        font-size: inherit;
+        width: 100%;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-color: transparent;
+        color: inherit;
+        padding: 8px 12px;
+        box-sizing: border-box;
+        &-focused,
+        &:hover {
+          background-color: rgb(222, 235, 255);
+        }
+        &-selected {
+          background-color: rgb(38, 132, 255) !important;
+          color: rgb(255, 255, 255) !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "syui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "",
+  "type": "module",
+  "exports": {
+    "./lib/styles.css": "./lib/styles.css",
+    ".": {
+      "module": "./lib/bundle.js",
+      "require": "./lib/bundle.cjs",
+      "default": "./lib/bundle.js"
+    }
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --mode=development",
+    "build:website": "webpack --mode=production",
+    "build": "rollup --config --no-stdin",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@testing-library/dom": "^8.19.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^18.11.11",
+    "clsx": "^1.2.1",
+    "css-loader": "^6.7.2",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "esbuild": "^0.15.18",
+    "esbuild-jest": "^0.5.0",
+    "esbuild-loader": "^2.20.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.3.1",
+    "jest-css-modules": "^2.1.0",
+    "jest-environment-jsdom": "^29.3.1",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss": "^8.4.19",
+    "postcss-loader": "^7.0.2",
+    "postcss-nested": "^6.0.0",
+    "rollup": "^3.6.0",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "rollup-plugin-scss": "^4.0.0",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
